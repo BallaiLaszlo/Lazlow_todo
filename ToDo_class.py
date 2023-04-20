@@ -59,13 +59,3 @@ class ToDoApp:
     def show_task_info(self):
         selected_task = self.lst_tasks.get(self.lst_tasks.curselection())
         show_task_info(selected_task)
-
-
-def main():
-    root = Tk()
-    todo_app = ToDoApp(root)
-    root.mainloop()
-
-
-if __name__ == '__main__':
-    main()
