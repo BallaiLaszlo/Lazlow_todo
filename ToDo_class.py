@@ -6,7 +6,7 @@ FONT = ("Arial", 20)
 SIZE = "600x600"
 
 
-class ToDoApp:
+class to_do_app:
     def __init__(self, master):
         self.master = master
         self.tasks = []
