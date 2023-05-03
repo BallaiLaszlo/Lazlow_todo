@@ -1,5 +1,4 @@
 from tkinter import *
-from Task_info import *
 from ToDo_class import *
 
 

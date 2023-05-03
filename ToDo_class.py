@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from tkinter import *
-from Task_info import *
+
 
 FONT = ("Arial", 20)
 SIZE = "600x600"
@@ -58,4 +58,14 @@ class to_do_app:
 
     def show_task_info(self):
         selected_task = self.lst_tasks.get(self.lst_tasks.curselection())
-        show_task_info(selected_task)
+        for task in self.tasks:
+            if task["task"] == selected_task:
+                selected_task_info = task["info"]
+                break
+        info_window = Toplevel()
+        info_window.title(f"Info about {selected_task}")
+        info_window.geometry("650x200")
+
+        # Create a new label with the task's "info"
+        lbl_info = Label(info_window,font=FONT, text=f"Info about {selected_task}:\n\n{selected_task_info}")
+        lbl_info.pack(pady=10)
